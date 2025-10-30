@@ -22,9 +22,9 @@ def SelSlowley(NumOfShare, AvgBPrice):
     Totalsell = 0
     
     Currentshare = NumOfShare
-    SellShare = Currentshare//2
+    SellShare = Currentshare//2  # half of shares 56823
 
-    Price = (AvgBPrice + (AvgBPrice*0.05))
+    Price = (AvgBPrice + (AvgBPrice*0.05)) # Good price
 
     for i in range(NumOfShare, 0, SellShare):
         SellShare = Currentshare//2

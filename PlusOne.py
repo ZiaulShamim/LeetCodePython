@@ -11,7 +11,6 @@ def PlusOne(arr):
         new_List.insert(0, mod)  # We can use the append method as well But for that 
         new_num = (new_num - mod)//10  # we have to use the deque method to make the stack
 
-
     return new_List
 
 def main():

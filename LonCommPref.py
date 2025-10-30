@@ -29,6 +29,7 @@ def main():
 
     def is_common(length):
         prefix = arr1[0][:length] # fl
+        
         return all(s.startswith(prefix))
     
     low, high = 0, min_len

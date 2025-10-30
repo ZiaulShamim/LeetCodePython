@@ -1,4 +1,26 @@
 def ValidParent(str):
+    # Here I am using the Library like the  Hashtable 
+
+    signs = {
+        "(": ")",
+        "{": "}",
+        "[]": "]"
+    }
+
+    list = ()
+
+    for char in str :
+        if char in "({[":
+            list.append(char) # Storing the value in the list like a stack
+
+        else:
+            if not list or list[-1] != signs.get(char, ""): # Checking first that if list is empty then return false
+                return False
+            list.pop()
+
+    return len(list) == 0    # Check if the list is empty or not if empty return True not then return False
+
+def ValidParent(str1):
     for i in range(0, len(str)):
         if ( str[i]== '('):
             if ( str[i+1] ==")" or str[len(str)- (i+1)] ==")" ):
@@ -21,6 +43,18 @@ def ValidParent(str):
 
 
 def main():
+
+    signs = {
+        "(": ")",
+        "{": "}",
+        "[]": "]"
+    }
+
+    ver ="("
+
+    output = signs.get(ver, "")
+    print(f"The output for {ver} is {output}")
+
     str1 = "()"
     str2 = "()[]{}"
     str3 = "(]"
