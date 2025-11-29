@@ -36,8 +36,7 @@ def DeleteDuplicateList(list):
             current.next = current.next.next # set the next next node as the next node if they are equal mans skip this next node
 
         else:
-            current = current.next # Asssign the next node as the next node if they are not equal
-
+            current = current.next # Asssign the next node as the current node means you include next node value in the new list
 
     return list # return the same list just delete/ skip the duplicate values !
 
