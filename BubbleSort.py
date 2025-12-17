@@ -12,10 +12,30 @@ def BubbleSort(arr):
 
     return arr
 
+# Insertion sort is quite opposite than the bubble sort 
+# Instead of comparing the value from the next index sort the previous sorted with the current index
+def InsretionSort(arr):
+    n = len(arr) - 1
+    for i in range(1, n):
+        temp = arr[i]
+
+        j = i - 1
+
+        while(j >= 0 & arr[j] > temp ):
+            arr[j + 1] = arr[j]
+            j -= 1
+            arr[j + 1] = temp
+
+
+    return arr
+
 def main ():
-    arr = [1,4,6,7,3,4,9,1,6,12]
+    arr = [4,1,6,7,3,4,9,1,6,12]
     out = BubbleSort(arr)
     print(f"The sorted array is {out}")
+
+    out2 =InsretionSort(arr)
+    print(f"The Sorted array after Insertion Sort is {out2}")
 
 if __name__ == "__main__":
     main()
